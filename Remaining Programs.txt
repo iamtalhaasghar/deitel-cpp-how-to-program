@@ -1,0 +1,28 @@
+
+*************************************************************************
+	Deitel How to Program
+*************************************************************************
+
+Remaining:
+-------------------------------------------------------------------------
+1)	6.38 - 6.39	Tower of Hanoi
+2)	7.22 - 7.26	Knight tour and Eight Queen
+3)	7.28 - 7.34	Recursion Exercises
+4)	8.17		Simpletron Project
+5)	9.15		TicTacToe
+
+
+
+Make a difference completed:
+-------------------------------------------------------------------------
+
+1)	1.9 	BMI
+2)	2.30  	BMI
+3)	3.16	Target Heart Rate
+4)	3.17	Health Records
+
+
+*************************************************************************
+Could be more effecient:
+
+1)	9.13	Enhancing Rectangle Class - Drawing, Resizing ... Rectangle

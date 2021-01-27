@@ -1,0 +1,134 @@
+
+
+
+
+MessageBox(0,"Error! This team has already been selected or is not available.",
+ "Incorrect Team2", MB_OK );
+
+
+
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+   // current date/time based on current system
+   time_t now = time(0);
+   
+   // convert now to string form
+   char* dt = ctime(&now);
+
+   cout << "The local date and time is: " << dt << endl;
+
+   // convert now to tm struct for UTC
+   tm *gmtm = gmtime(&now);
+   dt = asctime(gmtm);
+   cout << "The UTC date and time is:"<< dt << endl;
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+//move_cursor
+
+
+
+			COORD coord;
+			coord.X = 80;
+			coord.Y = 12;
+
+
+
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+//sound
+
+
+
+#pragma comment(lib, "winmm.lib")
+PlaySound(TEXT("Broken.wav"), NULL, SND_FILENAME | SND_ASYNC);
+
+
+Header
+
+Mmsystem.h (include Windows.h)
+Library
+
+Winmm.lib
+DLL
+
+Winmm.dll
+
+
+
+
+
+
+
+use the (mciSendstring) function instead .. with it u can play more than 1 sound , and u can play 2 sounds on top of each other :)
+
+examples:
+
+mciSendString("play wave1.wav", NULL, 0, NULL);
+
+mciSendString("play wave2.wav", NULL, 0, NULL);
+
+
+
+
+
+-----------------------------------------------------
+
+
+
+
+GetAsyncKeyState(0);
+
+
+------------------------------------------------------
+
+
+system("COLOR [attr]");
+
+Sets the default console foreground and background colors.
+
+COLOR [attr]
+
+attr Specifies color attribute of console output
+
+Color attributes are specified by TWO hex digits -- the first
+corresponds to the background; the second to the foreground. Each digit
+can be any of the following values:
+
+0 = Black 
+8 = Gray
+1 = Blue 
+9 = Light Blue
+2 = Green 
+A = Light Green
+3 = Aqua 
+B = Light Aqua
+4 = Red 
+C = Light Red
+5 = Purple 
+D = Light Purple
+6 = Yellow 
+E = Light Yellow
+7 = White 
+F = BringWhite
+
+If no argument is given, this command restores the color to what it was
+when CMD.EXE started. This value either comes from the current console
+window, the /T command line switch or from the DefaultColor registry
+value.
+
+The COLOR command sets ERRORLEVEL to 1 if an attempt is made to execute
+the COLOR command with a foreground and background color that are the
+same.
+
+Example: "COLOR fc" produces light red on bright white.
+------------------------------------------------------------------------------
